@@ -1,4 +1,4 @@
-# Recursively clean notarization crap
+# Recursively clean MacOS sierra+ notarization crap
 xattr -rc /some-malware-dir/
 (this remove all extended attributes and thus all notarization info from downloaded files/executables)
 
