@@ -1,5 +1,6 @@
 # Recursively clean MacOS sierra+ notarization crap
 xattr -rc /some-malware-dir/
+
 (this remove all extended attributes and thus all notarization info from downloaded files/executables)
 
 Explanation: If you download any executable or shell script from internet and you use any (hex) editor to open/read executable or script file (e.g. /some-malware-dir/some_malware_install.sh) then macos notarization won't let you. Instead it will show message like "some_malware_install.sh can't be opened because it is from an unidentified developer". The info that a file is from internet is in some extended attributes.
