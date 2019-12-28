@@ -1,5 +1,8 @@
-# clean notarization crap
-so it wont actually OPEN the (possibly malicious) bash file you only wanted to INSPECT: xattr -rc /some-malware-dir/
+# Recursively clean notarization crap
+xattr -rc /some-malware-dir/
 (this remove all extended attributes and thus all notarization info from downloaded files/executables)
 
-is solution to notarization error "can't be opened because it is from an unidentified developer" when trying to simply READ and not EXECUTE e.g. /some-malware-dir/some_malware_install.sh
+explanation: if you use any (hex) editor to open/read executable or script file (e.g. /some-malware-dir/some_malware_install.sh) then macos notarization won't let you.
+it is well known you can always override and open anyways in security settings.
+if you do that it won't simply open hex editor and let you inspect file BUT INSTEAD it straight EXECUTES file you only wanted to INSPECT!!
+This is very dangerous so only solution is prevent notarization crap from popping up in the first place.
