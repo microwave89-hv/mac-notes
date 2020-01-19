@@ -13,9 +13,9 @@ This is very dangerous so only solution is prevent notarization crap from poppin
 ```
 hdiutil attach -nomount <some-dmg.dmg>
 ```
-> /dev/disk2          	Apple_partition_scheme         	
-> /dev/disk2s1        	Apple_partition_map            	
-> /dev/disk2s2        	Apple_Driver_ATAPI             	
+> /dev/disk2          	Apple_partition_scheme
+> /dev/disk2s1        	Apple_partition_map
+> /dev/disk2s2        	Apple_Driver_ATAPI
 > /dev/disk2s3        	Apple_HFS
 
 ```
