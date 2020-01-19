@@ -39,7 +39,7 @@ In Finder you can now open /Volumes/<your-mount-folder/> and open the installer 
 
 # Unpack PKG in PKG (nested PKG)
 ```
-pkgutil --expand-full <some-pkg.pkg>
+pkgutil --expand-full <some-pkg.pkg> ./<destination-dir>
 ```
 Explanation: You want to peek into some pkg but you can't because the real deal is contained within an inner pkg which you cannot seem to browse in Finder. You cannot or you don't want to install the pkg either to retrieve the contents of the inner pkg the normal way.
 That's where the full expansion switch comes in handy.
