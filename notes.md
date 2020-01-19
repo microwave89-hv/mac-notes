@@ -9,7 +9,7 @@ But if you do that it won't simply open hex editor and let you inspect file BUT 
 
 This is very dangerous so only solution is prevent notarization crap from popping up in the first place by applying above solution.
 
-# Open DMG's if you deliberately crippled fsck_xyz
+# Open DMG's if you deliberately crippled fsck_hfs
 ```
 hdiutil attach -nomount <some-dmg.dmg>
 ```
@@ -22,5 +22,16 @@ hdiutil attach -nomount <some-dmg.dmg>
 > /dev/disk2s3        	Apple_HFS
 
 ```
-sudo mount_hfs -o ro </dev/disk2s3 /Volumes/EFIMOUNT/
+sudo mount_hfs -o ro /dev/disk2s3 /Volumes/<your-mount-folder>/
 ```
+(the device which contains the Apple_HFS FS may vary with your machine or DMG. You must create the mount folder first.)
+
+Explanation: You may have "turned off" fsck_hfs because you didn't want it to screw up your possibly incorrectly ejected USB drives, or also your intact ones. Congratulations! You just have gained back a tiny bit of control over your MacBook Pro and its MacOS X! Please leave it that way!
+If you're however trying to open any installer package now you will run into a problem:
+
+> The following disk images couldn't be opened
+
+> Reason: no mountable file systems
+
+The solution to it is following the steps mentioned to manually mount your DMG.
+In Finder you can now open /Volumes/<your-mount-folder/> and open the installer package as usual.
