@@ -37,9 +37,13 @@ If you're however trying to open any installer package now you will run into a p
 The solution to it is following the steps mentioned to manually mount your DMG.
 In Finder you can now open /Volumes/<your-mount-folder/> and open the installer package as usual.
 
-# Unpack PKG in PKG (nested PKG)
+# ~~Unpack PKG in PKG (nested PKG)~~
+# Extract "compressed" PKG
 ```
 pkgutil --expand-full <some-pkg.pkg> ./<destination-dir>
 ```
-Explanation: You want to peek into some pkg but you can't because the real deal is contained within an inner pkg which you cannot seem to browse in Finder. You cannot or you don't want to install the pkg either to retrieve the contents of the inner pkg the normal way.
-That's where the full expansion switch comes in handy.
+Explanation: You want to peek into some pkg but you can't because ~~the real deal is contained within an inner pkg which you cannot seem to browse in~~ Finder doesn't show an entry "Show Package Contents" in the PKG's contextual menu. You cannot or you don't want to install the pkg either to retrieve the contents of the inner pkg the normal way. Reason is that this time the pkg is not a directory but an archive. You must extract it to reveal its contents.
+
+That's where the (full) expansion switch comes in handy.
+
+On a sidenote: For me, issuing just "pkgutil --expand <some-pkg.pkg> ./<destination-dir>" worked equally well...
