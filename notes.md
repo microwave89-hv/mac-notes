@@ -36,3 +36,10 @@ If you're however trying to open any installer package now you will run into a p
 
 The solution to it is following the steps mentioned to manually mount your DMG.
 In Finder you can now open /Volumes/<your-mount-folder/> and open the installer package as usual.
+
+# Unpack PKG in PKG (nested PKG)
+```
+pkgutil --expand-full <some-pkg.pkg>
+```
+Explanation: You want to peek into some pkg but you can't because the real deal is contained within another pkg which you cannot browse in Finder. You cannot or you don't want to install the pkg either.
+That's where the full expansion switch comes in handy.
