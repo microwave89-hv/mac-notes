@@ -8,3 +8,16 @@ Today it is well known you can always override and open anyways in security sett
 But if you do that it won't simply open hex editor and let you inspect file BUT INSTEAD it straight EXECUTES file you only wanted to INSPECT!!
 
 This is very dangerous so only solution is prevent notarization crap from popping up in the first place by applying above solution.
+
+# Open DMG's if you deliberately crippled fsck_xyz
+```
+hdiutil attach -nomount <some-dmg.dmg>
+```
+> /dev/disk2          	Apple_partition_scheme         	
+> /dev/disk2s1        	Apple_partition_map            	
+> /dev/disk2s2        	Apple_Driver_ATAPI             	
+> /dev/disk2s3        	Apple_HFS
+
+```
+sudo mount_hfs -o ro </dev/disk2s3 /Volumes/EFIMOUNT/
+```
