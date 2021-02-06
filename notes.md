@@ -47,3 +47,9 @@ Explanation: You want to peek into some pkg but you can't because ~~the real dea
 That's where the (full) expansion switch comes in handy.
 
 On a sidenote: For me, issuing just "pkgutil --expand <some-pkg.pkg> ./<destination-dir>" worked equally well...
+
+# How hex diff files in macOS High Sierra
+```
+$ brew install colordiff
+$ colordiff --side-by-side --suppress-common-lines <(xxd -g 1 file1.bin) <(xxd -g 1 file2.bin)
+```
