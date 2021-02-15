@@ -53,3 +53,13 @@ On a sidenote: For me, issuing just "pkgutil --expand <some-pkg.pkg> ./<destinat
 $ brew install colordiff
 $ colordiff --side-by-side --suppress-common-lines <(xxd -g 1 file1.bin) <(xxd -g 1 file2.bin)
 ```
+
+# How diff branches (untested!)
+```
+$ git diff <path1> <path2>
+```
+
+# How find folder usage (partially tested!)
+```
+$ du -h <path>
+```
