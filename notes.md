@@ -65,12 +65,15 @@ $ du -h <path>
 ```
 
 # How git on github
+
 ```
-$ git clone https://github.com/<username>/<meaningful-branch>.git
-$ cd ./<meaningful-branch>
+$ git clone https://github.com/<username>/<meaningful-repo>.git
+$ cd ./<meaningful-repo>
 (modify file(s))
 $ git add .
 $ git commit -m "some meaningful msg"
-$ git remote set-url origin "https://<username>@github.com/<username>/<meaningful-branch>.git" # might not work if not once logged in to github ==> 2fa
-$ git push origin <meaningful-branch>
+$ git remote set-url origin "https://<username>@github.com/<username>/<meaningful-repo>.git" # might not work if not once logged in to github ==> 2fa
+$ git push origin <branch-name>
+(modify file(s) remote)
+$ git fetch https://github.com/<username>/<meaningful-repo>/unicorn.git
 ```
