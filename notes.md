@@ -64,7 +64,7 @@ $ git diff <path1> <path2>
 $ du -h <path>
 ```
 
-# How github
+# How git on github
 ```
 $ git clone https://github.com/<username>/<meaningful-branch>.git
 $ cd ./<meaningful-branch>
