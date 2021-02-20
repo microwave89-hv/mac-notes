@@ -63,3 +63,14 @@ $ git diff <path1> <path2>
 ```
 $ du -h <path>
 ```
+
+# How github
+```
+$ git clone https://github.com/<username>/<meaningful-branch>.git
+$ cd ./<meaningful-branch>
+(modify file(s))
+$ git add .
+$ git commit -m "some meaningful msg"
+$ git remote set-url origin "https://<username>@github.com/<username>/<meaningful-branch>.git"
+$ git push origin <meaningful-branch>
+```
