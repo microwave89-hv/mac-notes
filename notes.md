@@ -71,6 +71,6 @@ $ cd ./<meaningful-branch>
 (modify file(s))
 $ git add .
 $ git commit -m "some meaningful msg"
-$ git remote set-url origin "https://<username>@github.com/<username>/<meaningful-branch>.git" # might not work if not logged in once to github ==> 2fa
+$ git remote set-url origin "https://<username>@github.com/<username>/<meaningful-branch>.git" # might not work if not once logged in to github ==> 2fa
 $ git push origin <meaningful-branch>
 ```
