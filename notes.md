@@ -77,3 +77,8 @@ $ git push origin <branch-name>
 (modify file(s) remote)
 $ git fetch https://github.com/<username>/<meaningful-repo>/unicorn.git
 ```
+
+# Recursively chown files
+```
+$ sudo chown -R $(whoami) <dir>
+```
