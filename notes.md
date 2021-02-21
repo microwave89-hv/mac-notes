@@ -71,6 +71,8 @@ $ git clone https://github.com/<username>/<meaningful-repo>.git
 $ cd ./<meaningful-repo>
 (modify file(s))
 $ git add .
+($ git reset <some-file>) # undo add
+($ git diff --cached)     # Figure out what the differences are in the first place
 $ git commit -m "some meaningful msg"
 $ git remote set-url origin "https://<username>@github.com/<username>/<meaningful-repo>.git" # might not work if not once logged in to github ==> 2fa
 $ git push origin <branch-name>
