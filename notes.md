@@ -75,7 +75,7 @@ $ git commit -m "some meaningful msg"
 $ git remote set-url origin "https://<username>@github.com/<username>/<meaningful-repo>.git" # might not work if not once logged in to github ==> 2fa
 $ git push origin <branch-name>
 (modify file(s) remote)
-$ git fetch https://github.com/<username>/<meaningful-repo>/unicorn.git
+$ git fetch origin
 ```
 
 # Recursively chown files
