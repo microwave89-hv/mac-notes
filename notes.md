@@ -59,9 +59,9 @@ $ colordiff --side-by-side --suppress-common-lines <(xxd -g 1 file1.bin) <(xxd -
 $ git diff <path1> <path2>
 ```
 
-# How find folder usage (partially tested!)
+# How find subfolder usage in path (~~partially~~fully tested!)
 ```
-$ du -h <path>
+$ du -cxhd 1 <path>
 ```
 
 # How git on github
@@ -84,3 +84,7 @@ $ git fetch origin
 ```
 $ sudo chown -R $(whoami) <dir>
 ```
+
+# How get coder chars (SWISS Layout)
+* Backslash: {Option} + {Shift} + {7}
+* Tilde: {Option} + {n}
