@@ -93,6 +93,9 @@ $ sudo chown -R $(whoami) <dir>
 ```
 $ clang -fno-stack-protector -masm=intel test0.c -S
 $ mv ./test0.s test0.asm
+############################################################
+### (At this point you can modify the assembly at will!) ###
+############################################################
 $ as test0.asm -o test0.o
 $ ld -lc -macosx_version_min 10.13 -o test0 test0.o
 ```
