@@ -89,7 +89,7 @@ $ sudo chown -R $(whoami) <dir>
 * Backslash: {Option} + {Shift} + {7}
 * Tilde: {Option} + {n}
 
-# How compile C hello world into Macho 64 executable using XCode 10, while making the intermediate assembly (Intel step) step accessible
+# How compile C hello world into Macho 64 executable using XCode 10, while making the intermediate assembly (Intel syntax <3) step accessible
 ```
 $ clang -fno-stack-protector -masm=intel test0.c -S
 $ mv ./test0.s test0.asm
