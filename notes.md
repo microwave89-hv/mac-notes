@@ -88,3 +88,11 @@ $ sudo chown -R $(whoami) <dir>
 # How get coder chars (SWISS Layout)
 * Backslash: {Option} + {Shift} + {7}
 * Tilde: {Option} + {n}
+
+# How compile C hello world into Macho 64 executable using XCode 10, while making the intermediate assembly (Intel step) step accessible
+```
+$ clang -fno-stack-protector -masm=intel test0.c -S
+$ mv ./test0.s test0.asm
+$ as test0.asm -o test0.o
+$ ld -lc -macosx_version_min 10.13 -o test0 test0.o
+```
