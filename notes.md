@@ -102,12 +102,12 @@ $ ld -lc -macosx_version_min 10.13 -o test0 test0.o
 
 # How recursively list all files sorted by date
 * When printing the current file path terminate with a \x00 instead of any other EOL character
-* Have xargs read the current line until the 0 character is encountered as opposed to e.g. space character
-* Have ls parameters such that it prints the full path for the current file, which supplied by xargs command
+* Have xargs(1) read the current line until the 0 character is encountered as opposed to e.g. space character
+* Have ls(1) parameters such that it prints the full path for the current file, which supplied by xargs(1) command
 * Have it print the time in sort-friendly ISO format
 * Replace all but the date and the full path by a (space) delimiter and print the result
-* Have cut remove all replacement delimiters (in this example there were 4 leading ones in addition to the 6th and the 7th (time and timezone))
-* Have sort interpret the result numeric
+* Have cut(1) remove all replacement delimiters (in this example there were 4 leading ones in addition to the 6th and the 7th (time and timezone))
+* Have sort(1) interpret the result numeric
 ```
 $ find . -print0 | xargs --null ls -oAHd --full-time | awk '{$1=""; $2=""; $3=""; $4=""; $6=""; $7=""; print}' | cut -d" " -f5,8- | sort -n
 ```
