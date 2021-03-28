@@ -99,3 +99,15 @@ $ mv ./test0.s test0.asm
 $ as test0.asm -o test0.o
 $ ld -lc -macosx_version_min 10.13 -o test0 test0.o
 ```
+
+# How recursively list all files sorted by date
+* Print \x00 instead of other EOL character
+* Have xargs read the current line until the 0 character is encountered as opposed to e.g. space character
+* Have ls parameters such that it prints the full path for the current file, which supplied by xargs command
+* Have it print the time in sort-friendly ISO format
+* Replace all but the date and the full path by a (space) delimiter and print the result
+* Have cut remove all replacement delimiters (in this example there were 4 leading ones in addition to the 6th and the 7th (time and timezone))
+* Have sort interpret the result numeric
+```
+$ find . -print0 | xargs --null ls -oAHd --full-time | awk '{$1=""; $2=""; $3=""; $4=""; $6=""; $7=""; print}' | cut -d" " -f5,8- | sort -n
+```
