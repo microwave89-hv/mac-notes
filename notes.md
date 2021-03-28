@@ -101,7 +101,7 @@ $ ld -lc -macosx_version_min 10.13 -o test0 test0.o
 ```
 
 # How recursively list all files sorted by date
-* Print \x00 instead of other EOL character
+* When printing the current file path terminate with a \x00 instead of any other EOL character
 * Have xargs read the current line until the 0 character is encountered as opposed to e.g. space character
 * Have ls parameters such that it prints the full path for the current file, which supplied by xargs command
 * Have it print the time in sort-friendly ISO format
