@@ -115,9 +115,9 @@ $ find . \( -type f -size +16c \) -print0 | xargs --null ls -oAd --full-time | a
 
 # How create multiple partitions in MBR partition scheme using diskutil
 (Warning: This erases everything!)
-
+```
 diskutil partitionDisk disk<n> MBR "<filesystem personality1>" <NAME1> <size1> "<filesystem personality2>" <NAME2> <size2> "<filesystem personality<n> >" <NAME<n> > R
-  
+```
 e.g.
 ```
 $ diskutil partitionDisk disk1 MBR "MS-DOS FAT16" MSDFAT16 $((32*1024*1024))B "MS-DOS FAT32" MSDFAT32 R
