@@ -122,3 +122,6 @@ e.g.
 ```
 $ diskutil partitionDisk disk1 MBR "MS-DOS FAT16" MSDFAT16 $((32*1024*1024))B "MS-DOS FAT32" MSDFAT32 R
 ```
+
+# How verbose boot into macOS Recovery
+Press Cmd+r+v at the same time
