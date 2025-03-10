@@ -10,6 +10,7 @@ But if you do that it won't simply open hex editor and let you inspect file BUT 
 This is very dangerous so only solution is prevent notarization crap from popping up in the first place by applying above solution.
 
 # Open DMG's if you deliberately crippled fsck_hfs
+__This only applies if you did not use the true(1) method to cripple fsck_hfs__
 aka manually mounting a MacOS DMG file
 ```
 hdiutil attach -nomount <some-dmg.dmg>
