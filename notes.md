@@ -130,14 +130,29 @@ Press Cmd+r+v at the same time
 
 # Better way of crippling fsck_xxx (true(1) method)
 1. Reboot in macOS Recovery
-2. Find fsck_xxx as follows
+2. Find main system volume (Assume main system volume already mounted)
 ```
-# cd /
+# diskutil list  #note volume with expected size of your main system volume
+# mount          #note mount point (e.g. "Macintosh HD")
+```
+3. Find fsck_xxx
+```
+# cd <noted mount point>/System/
 # find . | grep -i fsck_
 ```
-3. Replace by true(1)
+3. Find true(1)
 ```
-# cd <folder containing currently considered fsck_xxx>
+# cd /bin/
+# find . | grep -i true    #Note full path if true executable found, else:
+# cd /sbin/
+# find . | grep -i true    #Note full path if true executable found, else:
+# cd /usr/
+# find . | grep -i true    #Note full path if true executable found
+```
+4. Replace fsck_xxx by true(1)
+```
+# cd <folder containing the currently considered fsck_xxx>
 # mv <currently considered fsck_xxx> <currently considered fsck_xxx_d>
-# mv true <currently considered fsck_xxx>
+# mv <noted true(1) path> <currently considered fsck_xxx>
 ```
+__Do above to all of {fsck_msdos, fsck_hfs, fsck_exfat}__
