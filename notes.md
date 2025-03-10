@@ -143,11 +143,11 @@ Press Cmd+r+v at the same time
 3. Find true(1)
 ```
 # cd /bin/
-# find . | grep -i true    #Note full path if true executable found, else:
+# find . | grep -i true    #Note full path if true(1) executable found, else:
 # cd /sbin/
-# find . | grep -i true    #Note full path if true executable found, else:
+# find . | grep -i true    #Note full path if true(1) executable found, else:
 # cd /usr/
-# find . | grep -i true    #Note full path if true executable found
+# find . | grep -i true    #Note full path if true(1) executable found
 ```
 4. Replace fsck_xxx by true(1)
 ```
