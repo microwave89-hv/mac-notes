@@ -11,6 +11,7 @@ This is very dangerous so only solution is prevent notarization crap from poppin
 
 # Open DMG's if you deliberately crippled fsck_hfs
 aka manually mounting a MacOS DMG file
+
 __This only applies if you did not use the true(1) method to cripple fsck_hfs__
 ```
 hdiutil attach -nomount <some-dmg.dmg>
