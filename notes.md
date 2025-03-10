@@ -125,3 +125,17 @@ $ diskutil partitionDisk disk1 MBR "MS-DOS FAT16" MSDFAT16 $((32*1024*1024))B "M
 
 # How verbose boot into macOS Recovery
 Press Cmd+r+v at the same time
+
+# Better way of crippling fsck_xxx
+1. Reboot in macOS Recovery
+2. Find fsck_xxx as follows
+```
+# cd /
+# find . | grep -i fsck_
+```
+3. Remove by true(1)
+```
+# cd <folder containing currently considered fsck_xxx>
+# mv <currently considered fsck_xxx> <currently considered fsck_xxx_d>
+# mv true <currently considered fsck_xxx>
+```
