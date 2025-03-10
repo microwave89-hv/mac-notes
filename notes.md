@@ -135,7 +135,7 @@ Press Cmd+r+v at the same time
 # cd /
 # find . | grep -i fsck_
 ```
-3. Remove by true(1)
+3. Replace by true(1)
 ```
 # cd <folder containing currently considered fsck_xxx>
 # mv <currently considered fsck_xxx> <currently considered fsck_xxx_d>
